@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPFNavigation.MVVM.ViewModel
 {
-    internal class SettingsViewModel
+    public class SettingsViewModel
     {
     }
 }
