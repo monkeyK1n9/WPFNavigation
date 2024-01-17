@@ -3,6 +3,7 @@ using System.ComponentModel.Design;
 using System.Configuration;
 using System.Data;
 using System.Windows;
+using WPFNavigation.MVVM.ViewModel;
 
 namespace WPFNavigation;
 
@@ -17,6 +18,9 @@ public partial class App : Application
     {
         IServiceCollection service = new ServiceCollection();
         service.AddSingleton<MainWindow>();
+        service.AddSingleton<MainViewModel>();
+        service.AddSingleton<HomeViewModel>();
+        service.AddSingleton<SettingsViewModel>();
 
         _serviceProvider = service.BuildServiceProvider();
     }
