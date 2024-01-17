@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WPFNavigation.MVVM.View
@@ -17,7 +18,7 @@ namespace WPFNavigation.MVVM.View
     /// <summary>
     /// Interaction logic for SettingsView.xaml
     /// </summary>
-    public partial class SettingsView : Window
+    public partial class SettingsView : Page
     {
         public SettingsView()
         {

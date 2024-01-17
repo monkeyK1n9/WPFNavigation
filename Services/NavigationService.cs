@@ -15,11 +15,12 @@ namespace WPFNavigation.Services
     public class NavigationService : ObservableObject, INavigationService
     {
         private readonly Func<Type, ViewModel> _viewModelFactory;
+
         private ViewModel _currentView;
         public ViewModel CurrentView
         {
             get { return _currentView; }
-            set
+            private set
             {
                 _currentView = value;
                 OnPropertyChanged();
@@ -33,9 +34,9 @@ namespace WPFNavigation.Services
 
         public void NavigateTo<TViewModel>() where TViewModel : ViewModel
         {
-            ViewModel viewModel = _viewModelFactory(typeof(TViewModel));
+            ViewModel viewModel = _viewModelFactory.Invoke(typeof(TViewModel));
 
-            _currentView = viewModel;
+            CurrentView = viewModel;
         }
     }
 }

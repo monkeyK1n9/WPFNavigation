@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPFNavigation.Core
 {
-    public abstract class ViewModel
+    public abstract class ViewModel : ObservableObject
     {
     }
 }

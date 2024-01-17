@@ -5,11 +5,11 @@
              xmlns:viewModel="clr-namespace:WPFNavigation.MVVM.ViewModel" 
              xmlns:view="clr-namespace:WPFNavigation.MVVM.View">
     <Application.Resources>
-        <DataTemplate DataType="{x:Type TypeName=viewModel:HomeViewModel}">
+        <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
             <view:HomeView />
         </DataTemplate>
 
-        <DataTemplate DataType="{x:Type TypeName=viewModel:SettingsViewModel}">
+        <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
             <view:SettingsView />
         </DataTemplate>
     </Application.Resources>

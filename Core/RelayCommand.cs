@@ -13,15 +13,15 @@ namespace WPFNavigation.Core
         private readonly Action<object> _execute;
 
         //constructor
-        public RelayCommand(Predicate<object> canExecute, Action<object> execute)
+        public RelayCommand(Action<object> execute, Predicate<object> canExecute)
         {
-            _canExecute = canExecute;
             _execute = execute;
+            _canExecute = canExecute;
         }
 
         public event EventHandler? CanExecuteChanged
         {
-            and => CommandManager.RequerySuggested += value;
+            add => CommandManager.RequerySuggested += value;
             remove => CommandManager.RequerySuggested -= value;
         }
 
