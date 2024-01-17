@@ -17,7 +17,12 @@ public partial class App : Application
     public App()
     {
         IServiceCollection service = new ServiceCollection();
-        service.AddSingleton<MainWindow>();
+
+        service.AddSingleton<MainWindow>(provider => new MainWindow
+        {
+            DataContext = provider.GetRequiredService<MainViewModel>()
+        });
+
         service.AddSingleton<MainViewModel>();
         service.AddSingleton<HomeViewModel>();
         service.AddSingleton<SettingsViewModel>();

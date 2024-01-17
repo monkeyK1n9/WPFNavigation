@@ -17,7 +17,7 @@ The app has two screens, Home and Settings and the user can switch between them.
 Clone, download or fork the repo.
 Restore the packages
 ```console
-	dotnet restore
+dotnet restore
 ```
 
 Or, if you have Visual Studio or C# dev kit in VSCode, this should run automatically
