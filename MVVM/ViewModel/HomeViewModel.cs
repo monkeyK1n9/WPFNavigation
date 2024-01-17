@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPFNavigation.MVVM.ViewModel
 {
-    public class HomeViewModel
+    public class HomeViewModel : Core.ViewModel
     {
     }
 }
