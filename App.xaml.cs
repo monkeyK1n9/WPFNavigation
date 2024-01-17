@@ -3,7 +3,9 @@ using System.ComponentModel.Design;
 using System.Configuration;
 using System.Data;
 using System.Windows;
+using WPFNavigation.Core;
 using WPFNavigation.MVVM.ViewModel;
+using WPFNavigation.Services;
 
 namespace WPFNavigation;
 
@@ -23,9 +25,16 @@ public partial class App : Application
             DataContext = provider.GetRequiredService<MainViewModel>()
         });
 
+        //register the screens
         service.AddSingleton<MainViewModel>();
         service.AddSingleton<HomeViewModel>();
         service.AddSingleton<SettingsViewModel>();
+
+        //register navigation service
+        service.AddSingleton<INavigationService, NavigationService>();
+
+        //register the func
+        service.AddSingleton<Func<Type, ViewModel>>(serviceProvider => viewModelType => (ViewModel)serviceProvider.GetRequiredService(viewModelType));
 
         _serviceProvider = service.BuildServiceProvider();
     }
