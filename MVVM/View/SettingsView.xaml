@@ -20,7 +20,7 @@
                 />
             <Button
                 Content="Home"
-                Click="{Binding NavigateToHomeCommand}"
+                Command="{Binding NavigateToHomeCommand}"
                 Height="25"
                 />
         </StackPanel>
