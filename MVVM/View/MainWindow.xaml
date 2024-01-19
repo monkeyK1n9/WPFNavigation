@@ -29,5 +29,6 @@
             Grid.Column="1"
             Content="{Binding Navigation.CurrentView}"
             />
+        
     </Grid>
 </Window>
