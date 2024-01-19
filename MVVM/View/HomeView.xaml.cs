@@ -16,9 +16,9 @@ using System.Windows.Shapes;
 namespace WPFNavigation.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for HomeView.xaml
     /// </summary>
-    public partial class HomeView : Page
+    public partial class HomeView : UserControl
     {
         public HomeView()
         {
