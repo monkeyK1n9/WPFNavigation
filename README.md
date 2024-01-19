@@ -14,7 +14,7 @@ The app has two screens, Home and Settings and the user can switch between them.
 
 | Preview |
 |---------|
-| ![preview]("/Docs/MainWindow.PNG") |
+| ![preview](/Docs/MainWindow.PNG) |
 
 ## Getting started
 ### Try The Published (production) app
