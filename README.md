@@ -12,9 +12,17 @@
 This is a showcase of navigation in a WPF (Windows Presentation Foundation) project.
 The app has two screens, Home and Settings and the user can switch between them.
 
-## Getting started
+| Preview |
+|---------|
+| [preview]("./Docs/MainWindow.png") |
 
-Clone, download or fork the repo.
+## Getting started
+### Try The Published (production) app
+Download the latest zip package from the repo. Unzip the file in your windows 
+machine and double click on **WPFNavigation.exe** file. You are good to go.
+
+### Developer
+You want to play with the code ? Clone, download or fork the repo.
 Restore the packages
 ```console
 dotnet restore
